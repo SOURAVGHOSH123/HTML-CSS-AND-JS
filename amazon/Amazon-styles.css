@@ -1,0 +1,22 @@
+body{
+    background-image: url("water\ image.jpg");
+    background-repeat: no-repeat;
+    background-position: fix;
+    background-size: cover;
+}
+/* .products{
+    margin-top: 200px;
+    
+} */
+main img{
+    width: 150px;
+    height: 100px;
+}
+.footproducts img{
+    width: 250px;
+    height: 300px;
+}
+footer a{
+    text-decoration: none;
+    color: lightblue;
+}
