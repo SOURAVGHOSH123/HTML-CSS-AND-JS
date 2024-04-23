@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;           
+        }
+        #Desktop{
+            position: fixed;
+            width: 100%;
+            flex: 100000;
+            padding: 5px;
+            background-color: blue;
+            margin: 0px;
+            height: 60px;
+            text-align: center;
+        }
+        #container{
+            position:fixed;
+            margin-left: 1100px;
+            margin-top: 100px;
+            color: black;
+            font-size: 20px;           
+        }
+        #friends{
+            position:fixed;
+            margin-left: 1100px;
+            margin-top: 400px;
+            font-size: 18px;
+            
+        }
+        #message{
+            float: right;
+            height: 200px;
+            width: 250px;
+            float: right;
+            margin: 5px;
+        }
+
+        #toggleButton:hover{
+            color: red;
+            font-size: 30px;
+        }
+        #side-menu {
+            width: auto;
+            margin: 0px;
+            position: fixed;
+            background-color: whitesmoke;
+            color: black;
+            padding: 10px; 
+            flex: 2;          
+        }
+        #side-menu img{
+            border-radius: 20px;
+        }
+        #ul li{
+            padding: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        #ul:hover{
+            width: auto;
+            height: 600px;
+            overflow-y: scroll;
+        }
+        input{
+            height: 30px;
+        }
+        #content {
+            
+            margin: 0px;
+            text-align: center;
+            flex: 100;
+            padding: 10px;
+            }
+
+        #button {
+
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            text-align: left;
+            width: 600px;
+            margin-left: 400px;
+            margin-bottom: 10px;
+            margin-top: 100px;
+            border: 1px solid white;
+        }
+        #part2,.part3{
+            background-color: white;
+            color: black;
+            padding: 10px;
+            text-align: left;
+            width: 500px;
+            margin-left: 420px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid white;
+        }
+
+        button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.like-button, .dislike-button, .share-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.like-button:hover, .dislike-button:hover, .share-button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.like-button {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.dislike-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+        button{
+            margin: 5px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f0f2f5;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    const likeButton = document.getElementById("likeButton");
+    const dislikeButton = document.getElementById("dislikeButton");
+    const shareButton = document.getElementById("shareButton");
+
+    let likeCount = 0;
+    let dislikeCount = 0;
+
+    likeButton.addEventListener("click", function () {
+        likeCount++;
+        updateCounts();
+    });
+
+    dislikeButton.addEventListener("click", function () {
+        dislikeCount++;
+        updateCounts();
+    });
+
+    shareButton.addEventListener("click", function () {
+        alert("Shared!");
+    });
+
+    function updateCounts() {
+        likeButton.innerHTML = `Like (${likeCount})`;
+        dislikeButton.innerHTML = `Dislike (${dislikeCount})`;
+    }
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#toggleButton").click(function(){
+    $("#ul").toggle();
+  });
+});
+</script>
+     
+
+     <div id="Desktop">
+         <p><h1>Welcome To Facebook Pages</h1></p>
+     </div>
+    <div id="side-menu">
+        <button id="toggleButton" class="arrow-button">&rarr;</button>
+        <div class="menu"><img  src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\2023_Facebook_icon.png" width="50px" height="40px">&nbsp&nbsp
+        <input type="text" name="search" id="search"placeholder="Search Facebook">
+        <button>Enter</button></div>
+       <div id="ul">
+        <ul type="none">
+            <li><a href="#sourav">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\PHOTOS\sourav ghosh 2.jpg" width="30px" height="30px">&nbsp&nbsp 
+            Sourav Ghosh</a></li>
+            <li><a href="#friends">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png" width="30px" height="30px">&nbsp&nbsp 
+            Finds friends</a></li>
+            <li><a href="#facebook">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\2023_Facebook_icon.png"width="30px" height="30px">&nbsp&nbsp
+            Welcome</a></li>
+            <li><a href="#memories">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\memories.png"width="30px" height="30px">&nbsp&nbsp
+            Memories</a></li>
+            <li><a href="#saved">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\saved.png"width="30px" height="30px">&nbsp&nbsp
+            Saved</a></li>
+            <li><a href="#video_icon">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\video_icon.png"width="30px" height="30px">&nbsp&nbsp
+            Videos</a></li>
+            <li><a href="#events_icon">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\events_icon.png"width="30px" height="30px">&nbsp&nbsp
+            Events</a></li>
+            <li><a href="#ads_manager">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\ads_manager icon.png"width="30px" height="30px">&nbsp&nbsp
+            Ads Manager</a></li>
+            <li><a href="#Blood_donation">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\Blood_donation icon.png"width="30px" height="30px">&nbsp&nbsp
+            Blood Donations</a></li>
+            <li><a href="#facebook_pay">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\facebook pay.png"width="30px" height="30px">&nbsp&nbsp
+            Facebook Pay</a></li>
+            <li><a href="#messanser">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\messanser icon.png"width="30px" height="30px">&nbsp&nbsp
+            Messanger</a></li>
+            <li><a href="#Play-Games-icon">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\Play-Games-icon.png"width="30px" height="30px">&nbsp&nbsp
+            Play Games</a></li>
+            <li><a href="#recent_ads_activity">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\recent_ads_activity.png"width="30px" height="30px">&nbsp&nbsp
+            Recent and Activity</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+    </div>
+    <div id="container">
+        <p>Group Conversation</p>      
+        <textarea id="message" placeholder="Write a message for for your group"></textarea>
+    </div>
+    <div id="friends">
+        <h2>Lists of friends</h2>
+        <ul type="none">
+            <li><a href="#soumya">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png"width="30px" height="30px">&nbsp&nbsp 
+            Soumya Ghosh</a></li>
+            <li><a href="#tapas">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png"width="30px" height="30px">&nbsp&nbsp 
+            Tapas Mohapatra</a></li>
+            <li><a href="#satya">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png"width="30px" height="30px">&nbsp&nbsp
+            Satya Mohapatra</a></li>
+            <li><a href="#suresh">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png"width="30px" height="30px">&nbsp&nbsp
+            Suresh singh</a></li>
+            <li><a href="#Anup">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png"width="30px" height="30px">&nbsp&nbsp
+            Anup Ghosh</a></li>
+           
+            <li><a href="#Dheeraj">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\friends_logo.png"width="30px" height="30px">&nbsp&nbsp
+            Dheeraj Kumar</a>
+            </li>
+         </ul></div>
+    
+    <div id="content">
+        <div id="button">
+            <button><img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\add_icon.png" width="25px" height="25px"><a href="https://www.facebook.com/stories/create"></a></button>&nbsp&nbsp
+            create story<br>
+            <p>share a photo or write something</p>
+        </div>
+        <div id="part2">
+            <section>
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\man-logo.png" width="25px" height="25px">&nbsp&nbsp
+            <input type="text" placeholder="what's on your mind sourav"><br>
+            <button type="button" ><a href="https://www.facebook.com/live/producer/v2/?entry_point=inline_profile_sprouts&target_id=61555595262966">Live Video</a></button>
+            <button type="button" >Photo/Video</button>
+            <button type="button" >Feeling/Activity</button>
+        </div>
+
+        <div class ="part3">
+            <img src="C:\Users\sourav ghosh\OneDrive\Desktop\PHOTOS\sourav ghosh 2.jpg" width="500px" height="400px"><br>
+            <div class="button-container">
+        <button id="likeButton" class="like-button">Like</button>
+        <button id="dislikeButton" class="dislike-button">Dislike</button>
+        <button id="shareButton" class="share-button">Share</button>
+    </div>          
+        </div>
+        
+    <br>
+
+        <div class ="part3">
+            <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\cu image.png"  width="500px" height="400px">
+            <div class="button-container">
+        <button id="likeButton" class="like-button">Like</button>
+        <button id="dislikeButton" class="dislike-button">Dislike</button>
+        <button id="shareButton" class="share-button">Share</button>
+    </div>
+        </div><br>
+
+       <div class ="part3">
+            <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\bitcoin-2007769_1280.jpg"
+             width="500px" height="400px"><br>
+            <div class="button-container">
+        <button id="likeButton" class="like-button">Like</button>
+        <button id="dislikeButton" class="dislike-button">Dislike</button>
+        <button id="shareButton" class="share-button">Share</button>
+    </div>          
+        </div>
+        <br> 
+        <div class ="part3">
+            <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\github icon.png"  width="500px" height="400px"><br>
+            <div class="button-container">
+        <button id="likeButton" class="like-button">Like</button>
+        <button id="dislikeButton" class="dislike-button">Dislike</button>
+        <button id="shareButton" class="share-button">Share</button>
+    </div>          
+        </div>
+        <br> 
+  <h2>Example</h2>                
+
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This i
+         <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+     <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+     <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+     <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>s the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+        <p>This is the main content area. You can display posts, updates, and other content here.</p>
+
+
+        <footer>
+            <p>&copy; 2024 Facebook Home Page</p>
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>
