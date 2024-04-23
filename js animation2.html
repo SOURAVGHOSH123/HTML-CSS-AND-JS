@@ -1,0 +1,139 @@
+<html>
+<head>
+    <style>
+    body{
+        background-image: linear-gradient(to top ,red 60% ,white 40%);
+        height: 100%;
+        width: 900px;
+        margin: 30px;
+        overflow: scroll;
+    }
+    marquee{
+         padding:5px;        
+    }
+    .main{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap:50px;  
+    }          
+    .div{
+        margin-top:40px;
+        border: 1px solid red;
+        height: 350px;
+        width: 250px;
+        padding: 5px;
+        text-align: justify;
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+    }    
+    .flip-card-inner {
+          position: relative;
+          transition: transform 2s ;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }   
+    .flip-card-inner:hover {
+        transform: rotateY(360deg);
+    }
+    .flip-card-front , .flip-card-back {
+          position: absolute;
+          backface-visibility: hidden;     
+    }
+    .flip-card-back {
+          transform: rotateY(180deg);
+        }
+    button{  
+        padding:5px;
+        background-color: red;
+        color: black;
+        border-radius: 25px;
+      } 
+    button:hover{background-color: yellow;
+        opacity: 0.5; font-size: 30px}
+    .div p{
+        min-height: 110px;
+    }
+    a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+    }
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+
+    let ny = 11;    //rows
+    let nx = 25;    //columns
+
+    //Creating the boxes
+    let container = document.querySelector('.container');
+    for (let i=0; i<ny*nx; i++){
+        let box = document.createElement('div');
+        box.setAttribute('class', 'box');
+        container.appendChild(box);
+    }
+
+    anime({
+        targets: '.box',
+        scale: ['100%', '50%'],
+        delay: anime.stagger(200, {grid: [nx, ny]}),
+    });
+    </script>
+
+
+<marquee scrollamount="10" width="130%" behavior="alternate" direction="left" color="black">
+    <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\cuimslogo.png"></marquee>
+  <div class="main">
+    <div class="div">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                
+                    <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\studentlogin.png" height="100px" width="250px">
+                    <h3>Student Login</h3>
+                     <p>Login with your UID and Password to access
+                         your Student Services and Account. 
+                         The CUIMS will keep a record of your progress and 
+                         keep you apprised of the latest updates</p>
+                    <center><button type="button"> <a href="C:\Users\HP\Desktop\myform.html">login Now</a></button>
+                    </center>
+            </div>
+            <div class="flip-card-back">
+                <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\cu image.png" height="350px" width="240px">
+            </div>
+        </div>
+    </div>
+
+    <div class="div">
+        <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\lms_login_logo.png" height="100px " width="250px">
+        <h3>LMS Login</h3>
+        <p>Login to your LMS using your UID/EmployeeID and
+             CUIMS password. In case you face any login issues, 
+             then reset your CUIMS Password and wait for 20 minutes to proceed.</p>
+            <center><button type="button"> <a href="https://lms.cuchd.in/login/index.php">login Now</a></button></center>
+    </div>
+
+    <div class="div">
+        <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\staff_login_logo.png" height="100px" width="250px">
+        <h3>Staff Login</h3>
+        <p>Login using your Employee Code and Password to access your account,
+             keep track of y
+             our progress and other official services</p>
+            
+             <center><button type="button"><a href="https://www.w3schools.com/html/html_css.asp">login Now</a></button></center>
+    </div>
+
+    <div class="div">
+        <img src="C:\Users\sourav ghosh\OneDrive\Desktop\flipkart photo\admission_logo.png" height="100px" width="250px">
+        <h3>Admission Login</h3>
+        <p>For Admission Staff only. Use your Employee Code and Password to
+             log in for admission related services.</p>
+
+            <center>
+                <button type="button" > <a href="https://www.w3schools.com/html/html_css.asp">login Now</a></button>
+            </center>
+    </div>   
+</div> 
+</body>
+</html>
